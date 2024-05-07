@@ -1,6 +1,8 @@
 .intro {
   background-color: #eae0ce;
   padding: 130px;
+  text-align: center; /* Centrer le texte horizontalement */
+  color: #2c1315;
 }
 
 h2 {
@@ -9,11 +11,6 @@ h2 {
   font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1;
-}
-
-.intro {
-  text-align: center; /* Centrer le texte horizontalement */
-  color: #2c1315;
 }
 
 .intro p {
