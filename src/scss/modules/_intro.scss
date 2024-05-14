@@ -28,11 +28,12 @@ h2 {
 .intro p {
   font-family: "Inter", sans-serif;
   font-size: 17px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 @media (min-width: 768px) {
   .intro p {
     font-size: 22px;
+    margin-top: 40px;
   }
 }

@@ -60,13 +60,14 @@ h3 {
 p {
   font-family: "Inter", sans-serif;
   font-size: 17px;
-  margin-top: 40px;
+  margin-top: 20px;
   line-height: 1.5;
 }
 
 @media (min-width: 768px) {
   p {
     font-size: 20px;
+    margin-top: 40px;
   }
 }
 
