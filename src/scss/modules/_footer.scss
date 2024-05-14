@@ -13,6 +13,14 @@ footer {
   margin-right: 5px;
 }
 
+.coordinate a {
+  text-decoration: none;
+}
+
+.coordinate a:hover {
+  color: #720004;
+}
+
 .copyright p {
   font-size: 14px;
   margin-top: 90px;
