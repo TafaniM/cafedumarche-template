@@ -15,4 +15,16 @@ footer {
 
 .copyright p {
   font-size: 14px;
+  margin-top: 90px;
+}
+
+.container {
+  text-align: center; /* Pour centrer horizontalement le contenu */
+}
+
+.line {
+  width: 400px; /* Largeur de la ligne */
+  height: 1px; /* Hauteur de la ligne */
+  background-color: #eae0ce; /* Couleur de la ligne */
+  margin: 50px 0px 50px;
 }
