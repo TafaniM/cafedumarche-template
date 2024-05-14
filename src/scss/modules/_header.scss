@@ -30,6 +30,11 @@ header a:hover {
 
 /* burger menu */
 
+.menu-toggle {
+  background-color: transparent; /* Rendre le fond de couleur transparent */
+  border: none; /* Supprimer les bordures */
+}
+
 /* Media query pour rendre le menu réactif */
 @media screen and (max-width: 768px) {
   header {
@@ -42,6 +47,11 @@ header a:hover {
 
   .menu-toggle {
     display: block; /* Afficher le bouton du menu burger */
+  }
+
+  /* Cacher l'image du logo pour les écrans de 768px ou moins */
+  .logo {
+    display: none;
   }
 }
 

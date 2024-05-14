@@ -12,7 +12,13 @@
 }
 
 .cooking h3 {
-  margin-top: 175px;
+  margin-top: 70px;
+}
+
+@media (min-width: 768px) {
+  .cooking h3 {
+    margin-top: 175px;
+  }
 }
 
 .carousel {
