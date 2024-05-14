@@ -1,8 +1,14 @@
 footer {
   background-color: #2c1315;
-  padding: 130px;
+  padding: 35px 20px;
   color: #eae0ce;
   text-align: center; /* Centrer le texte horizontalement */
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding: 130px;
+  }
 }
 
 // .coordinate p {

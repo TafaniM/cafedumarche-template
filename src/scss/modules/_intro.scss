@@ -1,8 +1,14 @@
 .intro {
   background-color: #eae0ce;
-  padding: 130px;
+  padding: 35px 20px;
   text-align: center; /* Centrer le texte horizontalement */
   color: #2c1315;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    padding: 130px;
+  }
 }
 
 h2 {

@@ -2,7 +2,13 @@
   background-color: #4e4f46;
   color: #eae0ce;
   text-align: center;
-  padding: 75px;
+  padding: 35px 20px;
+}
+
+@media (min-width: 768px) {
+  .cooking {
+    padding: 75px;
+  }
 }
 
 .cooking h3 {
