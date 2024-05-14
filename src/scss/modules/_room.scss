@@ -7,6 +7,12 @@
 
 @media (min-width: 768px) {
   .room {
+    padding: 130px 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .room {
     padding: 130px;
   }
 }

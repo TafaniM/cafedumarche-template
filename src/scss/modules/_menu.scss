@@ -7,6 +7,12 @@
 
 @media (min-width: 768px) {
   .menu {
+    padding: 130px 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu {
     padding: 150px;
   }
 }
@@ -24,6 +30,12 @@
 }
 
 @media (min-width: 768px) {
+  .card {
+    padding: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
   .card {
     padding: 150px;
   }

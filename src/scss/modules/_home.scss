@@ -25,7 +25,23 @@
   width: 30%;
 }
 
+@media (max-width: 1200px) {
+  .title-container {
+    padding: 40px;
+    outline-offset: -12px;
+    width: 40%; /* Largeur de 80% de la largeur de l'écran */
+  }
+}
+
 @media (max-width: 768px) {
+  .title-container {
+    padding: 18px;
+    outline-offset: -7px;
+    width: 50%; /* Largeur de 80% de la largeur de l'écran */
+  }
+}
+
+@media (max-width: 576px) {
   .title-container {
     padding: 18px;
     outline-offset: -7px;

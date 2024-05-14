@@ -7,6 +7,12 @@ footer {
 
 @media (min-width: 768px) {
   footer {
+    padding: 130px 0px;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer {
     padding: 130px 130px 50px;
   }
 }
@@ -27,7 +33,7 @@ footer {
   font-size: 12px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1245px) {
   .coordinate p {
     font-size: 17px;
   }
