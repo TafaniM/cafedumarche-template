@@ -1,7 +1,12 @@
 .home {
   width: 100%; /* Pour que le conteneur prenne 100% de la largeur de l'écran */
   position: relative;
-  margin-top: 70px;
+}
+
+@media (min-width: 768px) {
+  .home {
+    margin-top: 70px;
+  }
 }
 
 .home img {
@@ -17,4 +22,34 @@
   padding: 60px;
   outline: 1px solid #2c1315;
   outline-offset: -16px;
+  width: 30%;
+}
+
+@media (max-width: 768px) {
+  .title-container {
+    padding: 18px;
+    outline-offset: -7px;
+    width: 65%; /* Largeur de 80% de la largeur de l'écran */
+  }
+}
+
+/* image de fond */
+
+@media (max-width: 768px) {
+  .home {
+    position: relative; /* Assurez-vous que la position est relative */
+    height: 100vh; /* Définit la hauteur de l'élément sur 100% de la hauteur de la fenêtre */
+    overflow: hidden; /* Empêche tout contenu supplémentaire de déborder de l'élément */
+  }
+}
+
+@media (max-width: 768px) {
+  .home > img.background-image {
+    position: absolute; /* Position absolue pour que l'image couvre toute la hauteur de l'élément parent */
+    width: auto; /* La largeur de l'image s'ajustera automatiquement pour conserver ses proportions */
+    height: 100%; /* La hauteur de l'image sera de 100% de la hauteur de l'élément parent */
+    top: 0; /* Positionnez l'image en haut de l'élément parent */
+    left: 0; /* Positionnez l'image à gauche de l'élément parent */
+    object-fit: cover; /* Ajuste la taille de l'image pour qu'elle couvre toute la zone disponible sans déformation */
+  }
 }
