@@ -1,6 +1,12 @@
 .reserve {
   background-color: #eae0ce;
-  padding: 130px;
+  padding: 70px 15px;
   color: #2c1315;
   text-align: center; /* Centrer le texte horizontalement */
+}
+
+@media (min-width: 768px) {
+  .reserve {
+    padding: 130px;
+  }
 }

@@ -1,8 +1,14 @@
 .room {
   background-color: #eae0ce;
-  padding: 130px;
+  padding: 70px 20px;
   text-align: center; /* Centrer le texte horizontalement */
   color: #2c1315;
+}
+
+@media (min-width: 768px) {
+  .room {
+    padding: 130px;
+  }
 }
 
 .room img {

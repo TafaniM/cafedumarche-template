@@ -1,8 +1,14 @@
 .service {
   background-color: #eae0ce;
-  padding: 130px;
+  padding: 70px 20px;
   color: #2c1315;
   text-align: center; /* Centrer le texte horizontalement */
+}
+
+@media (min-width: 768px) {
+  .service {
+    padding: 130px;
+  }
 }
 
 // .service h3 {

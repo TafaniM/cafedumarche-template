@@ -1,6 +1,6 @@
 .menu {
   background-color: #eae0ce;
-  padding: 15px;
+  padding: 70px 15px;
   text-align: center; /* Centrer le texte horizontalement */
   color: #eae0ce;
 }
@@ -20,5 +20,11 @@
   // padding: 60px;
   outline: 1px solid #eae0ce;
   outline-offset: -16px;
-  padding: 150px;
+  padding: 50px 10px;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 150px;
+  }
 }

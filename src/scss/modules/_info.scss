@@ -1,6 +1,6 @@
 .info {
   background-color: #eae0ce;
-  padding: 10px;
+  padding: 70px 15px;
   color: #eae0ce;
   text-align: center; /* Centrer le texte horizontalement */
 }
@@ -15,7 +15,13 @@
   background-color: #4e4f46;
   outline: 1px solid #eae0ce;
   outline-offset: -16px;
-  padding: 150px;
+  padding: 50px 10px;
+}
+
+@media (min-width: 768px) {
+  .infocard {
+    padding: 150px;
+  }
 }
 
 .day {
