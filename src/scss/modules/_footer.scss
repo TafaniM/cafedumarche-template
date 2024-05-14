@@ -7,7 +7,7 @@ footer {
 
 @media (min-width: 768px) {
   footer {
-    padding: 130px;
+    padding: 130px 130px 50px;
   }
 }
 
@@ -39,12 +39,13 @@ footer {
 
 .copyright p {
   font-size: 8px;
-  margin-top: 90px;
+  margin-top: 70px;
 }
 
 @media (min-width: 768px) {
   .copyright p {
     font-size: 14px;
+    margin-top: 150px;
   }
 }
 
@@ -57,4 +58,21 @@ footer {
   height: 1px; /* Hauteur de la ligne */
   background-color: #eae0ce; /* Couleur de la ligne */
   margin: 50px 0px 50px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .logofooter {
+    width: 25vh;
+  }
+  .line {
+    margin: 50px 0px 30px;
+  }
+  footer p {
+    margin-top: 18px;
+  }
+}
+
+.row {
+  margin: auto;
 }
