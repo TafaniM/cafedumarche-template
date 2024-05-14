@@ -1,8 +1,14 @@
 .info {
   background-color: #eae0ce;
-  padding: 130px;
+  padding: 10px;
   color: #eae0ce;
   text-align: center; /* Centrer le texte horizontalement */
+}
+
+@media (min-width: 768px) {
+  .info {
+    padding: 130px;
+  }
 }
 
 .infocard {

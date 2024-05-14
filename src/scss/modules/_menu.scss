@@ -1,8 +1,14 @@
 .menu {
   background-color: #eae0ce;
-  padding: 150px;
+  padding: 15px;
   text-align: center; /* Centrer le texte horizontalement */
   color: #eae0ce;
+}
+
+@media (min-width: 768px) {
+  .menu {
+    padding: 150px;
+  }
 }
 
 .card {
