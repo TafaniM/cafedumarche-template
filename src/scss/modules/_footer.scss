@@ -17,13 +17,29 @@ footer {
   text-decoration: none;
 }
 
+.coordinate p {
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .coordinate p {
+    font-size: 17px;
+  }
+}
+
 .coordinate a:hover {
   color: #720004;
 }
 
 .copyright p {
-  font-size: 14px;
+  font-size: 8px;
   margin-top: 90px;
+}
+
+@media (min-width: 768px) {
+  .copyright p {
+    font-size: 14px;
+  }
 }
 
 .container {

@@ -1,16 +1,23 @@
 .button {
   display: inline-block; /* Permet d'ajuster la largeur et la hauteur du bouton */
-  padding: 16px 41px;
+  padding: 10px 17px;
   border-radius: 50px;
   background-color: #720004;
   color: #eae0ce;
   text-align: center; /* Centrer le texte horizontalement */
-  font-size: 28px;
+  font-size: 24px;
   font-family: marlide-display-variable, sans-serif;
   font-weight: 500;
   letter-spacing: 0.02em;
   cursor: pointer;
   margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 28px;
+    padding: 16px 41px;
+  }
 }
 
 .button:hover {
