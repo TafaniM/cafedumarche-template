@@ -1,6 +1,6 @@
 header {
   background-color: #2c1315;
-  padding: 10px;
+  padding: 20px 5px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -26,38 +26,4 @@ header a:hover {
 
 .link {
   margin-left: auto; /* Pousse les liens vers la droite */
-}
-
-/* burger menu */
-
-.menu-toggle {
-  background-color: transparent; /* Rendre le fond de couleur transparent */
-  border: none; /* Supprimer les bordures */
-}
-
-/* Media query pour rendre le menu réactif */
-@media screen and (max-width: 768px) {
-  header {
-    background-color: transparent; /* Rendre le fond de couleur transparent */
-  }
-
-  header a {
-    display: none; /* Cacher les liens du menu */
-  }
-
-  .menu-toggle {
-    display: block; /* Afficher le bouton du menu burger */
-  }
-
-  /* Cacher l'image du logo pour les écrans de 768px ou moins */
-  .logo {
-    display: none;
-  }
-}
-
-/* Cacher le bouton du menu burger pour les écrans supérieurs à 768px */
-@media screen and (min-width: 769px) {
-  .menu-toggle {
-    display: none; /* Cacher le bouton du menu burger */
-  }
 }
