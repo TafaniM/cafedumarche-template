@@ -1,0 +1,29 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  // transition: transform 0.5s ease;
+}
+
+.carousel img {
+  width: 100%; /* Assurez-vous que les images remplissent tout le conteneur */
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.left-arrow {
+  left: 10px; /* Ajustez la position de la flèche gauche */
+}
+
+.right-arrow {
+  right: 10px; /* Ajustez la position de la flèche droite */
+}
