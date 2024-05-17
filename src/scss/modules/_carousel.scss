@@ -1,29 +1,34 @@
-.carousel-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
 .carousel {
-  display: flex;
-  // transition: transform 0.5s ease;
+  position: relative;
+  text-align: center;
 }
 
 .carousel img {
-  width: 100%; /* Assurez-vous que les images remplissent tout le conteneur */
+  display: none;
+  width: 100%; /* Ajustez la largeur selon vos besoins */
 }
 
-.carousel-arrow {
+.carousel img:first-child {
+  display: inline;
+}
+
+.carousel-button {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 60%;
+  // transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #eae0ce;
+  font-size: 40px;
   cursor: pointer;
+  z-index: 10000;
+  border-radius: 100%;
 }
 
-.left-arrow {
-  left: 10px; /* Ajustez la position de la flèche gauche */
+#prevButton {
+  left: 10px;
 }
 
-.right-arrow {
-  right: 10px; /* Ajustez la position de la flèche droite */
+#nextButton {
+  right: 10px;
 }

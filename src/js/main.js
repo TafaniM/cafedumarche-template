@@ -50,63 +50,28 @@ menuLinks.forEach(function (link) {
 //carousel
 //carousel
 
-const carousel = document.querySelector(".carousel");
-const leftArrow = document.querySelector(".left-arrow");
-const rightArrow = document.querySelector(".right-arrow");
-let currentIndex = 0;
-const totalImages = carousel.children.length;
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".carousel img");
+  const prevButton = document.getElementById("prevButton");
+  const nextButton = document.getElementById("nextButton");
+  let currentIndex = 0;
 
-// Fonction pour faire défiler le carousel vers la gauche
-function scrollLeft() {
-  if (currentIndex > 0) {
-    currentIndex--;
-  } else {
-    currentIndex = totalImages - 1; // Aller à la dernière image si on est à la première
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.style.display = i === index ? "inline" : "none";
+    });
   }
-  updateCarousel();
-}
 
-// Fonction pour faire défiler le carousel vers la droite
-function scrollRight() {
-  if (currentIndex < totalImages - 1) {
-    currentIndex++;
-  } else {
-    currentIndex = 0; // Revenir à la première image si on est à la dernière
-  }
-  updateCarousel();
-}
+  prevButton.addEventListener("click", function () {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
 
-// Met à jour la position du carousel
-function updateCarousel() {
-  carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
+  nextButton.addEventListener("click", function () {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
 
-// Ajoutez des écouteurs d'événements de clic aux flèches
-leftArrow.addEventListener("click", scrollLeft);
-rightArrow.addEventListener("click", scrollRight);
-
-// Fonction pour faire défiler le carousel vers la gauche
-function scrollLeft() {
-  if (currentIndex > 0) {
-    currentIndex--;
-  } else {
-    currentIndex = totalImages - 1; // Aller à la dernière image si on est à la première
-    carousel.style.transition = "none"; // Désactiver la transition pour un mouvement instantané
-    carousel.style.transform = `translateX(-${totalImages * 100}%)`; // Faire avancer le carousel d'une longueur d'une image supplémentaire vers la droite
-    setTimeout(() => {
-      carousel.style.transition = "transform 0.5s ease-in-out"; // Réactiver la transition pour une animation fluide
-      currentIndex = totalImages - 1; // Mettre à jour l'index actuel à la dernière image
-      carousel.style.transform = `translateX(-${currentIndex * 100}%)`; // Afficher la dernière image
-    }, 0); // Attendre une petite période avant de réactiver la transition
-  }
-}
-
-// // Fonction pour faire défiler le carousel vers la droite
-// function scrollRight() {
-//   if (currentIndex < totalImages - 1) {
-//     currentIndex++;
-//   } else {
-//     currentIndex = 0; // Revenir à la première image si on est à la dernière
-//   }
-//   updateCarousel();
-// }
+  // Initial display
+  showImage(currentIndex);
+});
