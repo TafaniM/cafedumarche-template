@@ -94,3 +94,13 @@
 .close-button {
   height: 50px;
 }
+
+body {
+  overflow-y: auto !important;
+}
+
+.container,
+.row {
+  overflow: visible !important;
+  height: auto !important;
+}
