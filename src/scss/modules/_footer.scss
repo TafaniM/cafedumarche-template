@@ -13,7 +13,7 @@ footer {
 
 @media (min-width: 768px) {
   footer {
-    padding: 130px 130px 50px;
+    padding: 50px;
   }
 }
 
@@ -30,14 +30,14 @@ footer {
 }
 
 .coordinate p {
-  font-size: 12px;
+  font-size: 15px;
 }
 
-@media (min-width: 767px) {
-  .coordinate p {
-    font-size: 11px;
-  }
-}
+// @media (min-width: 767px) {
+//   .coordinate p {
+//     font-size: 11px;
+//   }
+// }
 
 @media (min-width: 1112px) {
   .coordinate p {
@@ -56,13 +56,13 @@ footer {
 }
 
 .copyright p {
-  font-size: 8px;
+  font-size: 12px;
   margin-top: 70px;
 }
 
 @media (min-width: 768px) {
   .copyright p {
-    font-size: 10px;
+    // font-size: 10px;
     margin-top: 130px;
   }
 }
@@ -85,10 +85,23 @@ footer {
   align-items: center;
 }
 
+.logofooter {
+  height: 120px;
+}
+
+.icon {
+  // width: 30px; /* Exemple : largeur de l'image */
+  height: 30px;
+}
+
+footer .icon {
+  margin-bottom: 10px;
+}
+
 @media (max-width: 768px) {
-  .logofooter {
-    width: 25vh;
-  }
+  // .logofooter {
+  //   width: 25vh;
+  // }
   .line {
     margin: 50px 0px 30px;
   }
