@@ -3,45 +3,64 @@
 //burgermenu
 //burgermenu
 
-// Sélectionnez le bouton du menu burger
-const menuToggle = document.querySelector(".menu-toggle");
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menuDropdown = document.querySelector(".menu-dropdown");
+  const closeButton = document.querySelector(".menu-dropdown .close-button");
+  const menuLinks = document.querySelectorAll(".menu-dropdown a");
+  const body = document.body;
 
-// Sélectionnez le menu déroulant
-const menuDropdown = document.querySelector(".menu-dropdown");
+  // Vérifie si les éléments sont correctement sélectionnés
+  if (!menuToggle || !menuDropdown || !closeButton) {
+    console.error(
+      "Un ou plusieurs éléments nécessaires n'ont pas été trouvés."
+    );
+    return;
+  }
 
-// Sélectionnez l'image de la croix pour fermer le menu déroulant
-const closeButton = document.querySelector(".menu-dropdown img");
+  console.log("Tous les éléments nécessaires ont été trouvés.");
 
-// Ajoutez un écouteur d'événements de clic au bouton du menu burger
-menuToggle.addEventListener("click", function () {
-  // Affichez ou masquez le menu déroulant
-  menuDropdown.style.display === "none"
-    ? (menuDropdown.style.display = "block")
-    : (menuDropdown.style.display = "none");
+  // Vérifie si le menu est actuellement ouvert
+  function isMenuOpen() {
+    return menuDropdown.style.display === "block";
+  }
 
-  // Ajoutez ou supprimez la classe pour bloquer le défilement
-  document.body.classList.toggle("disable-scroll");
-});
+  // Fonction pour ouvrir le menu
+  function openMenu() {
+    console.log("Ouverture du menu");
+    menuDropdown.style.display = "block";
+    body.classList.add("disable-scroll");
+  }
 
-// Ajoutez un écouteur d'événements de clic à l'image de la croix
-closeButton.addEventListener("click", function () {
-  // Masquez le menu déroulant lorsque vous cliquez sur la croix
-  menuDropdown.style.display = "none";
-
-  // Supprimez la classe pour bloquer le défilement
-  document.body.classList.remove("disable-scroll");
-});
-
-// Sélectionnez tous les liens dans le menu déroulant
-const menuLinks = document.querySelectorAll(".menu-dropdown a");
-
-// Parcourir tous les liens et ajouter un gestionnaire d'événements de clic
-menuLinks.forEach(function (link) {
-  link.addEventListener("click", function () {
-    // Masquez le menu déroulant lorsque vous cliquez sur un lien
+  // Fonction pour fermer le menu
+  function closeMenu() {
+    console.log("Fermeture du menu");
     menuDropdown.style.display = "none";
-    // Supprimez la classe pour bloquer le défilement
-    document.body.classList.remove("disable-scroll");
+    body.classList.remove("disable-scroll");
+  }
+
+  // Ajoute un écouteur d'événements de clic au bouton du menu burger
+  menuToggle.addEventListener("click", function () {
+    if (isMenuOpen()) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Ajoute un écouteur d'événements de clic à l'image de la croix
+  closeButton.addEventListener("click", closeMenu);
+
+  // Parcourir tous les liens et ajouter un gestionnaire d'événements de clic
+  menuLinks.forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Ferme le menu si l'utilisateur clique en dehors du menu
+  menuDropdown.addEventListener("click", function (event) {
+    if (event.target === menuDropdown) {
+      closeMenu();
+    }
   });
 });
 

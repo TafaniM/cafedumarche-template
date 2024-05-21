@@ -88,4 +88,9 @@
 /* Style pour le défilement désactivé */
 .disable-scroll {
   overflow: hidden;
+  height: 100vh; /* Assurez-vous que la hauteur est fixe */
+}
+
+.close-button {
+  height: 50px;
 }

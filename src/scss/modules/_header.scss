@@ -32,12 +32,12 @@ header a:hover {
   height: 50px;
 }
 
-/* Ensure images in the header and the rest of the page are not affected */
+/* S'assurer que les images dans le header ne sont pas affectées */
 header img,
 header .menu-toggle img,
 header .close-button,
-.header-content .link a img {
-  width: auto; /* or specify the desired width */
+.header-content .link img {
+  width: auto; /* ou spécifiez la largeur désirée */
 }
 
 /* Specific styling for logo images in the header if needed */
