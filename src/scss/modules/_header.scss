@@ -27,3 +27,20 @@ header a:hover {
 .link {
   margin-left: auto; /* Pousse les liens vers la droite */
 }
+
+.logo {
+  height: 50px;
+}
+
+/* Ensure images in the header and the rest of the page are not affected */
+header img,
+header .menu-toggle img,
+header .close-button,
+.header-content .link a img {
+  width: auto; /* or specify the desired width */
+}
+
+/* Specific styling for logo images in the header if needed */
+.header-content .logo {
+  width: auto; /* or specify the desired width */
+}
