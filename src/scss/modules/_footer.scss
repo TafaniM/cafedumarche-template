@@ -11,7 +11,7 @@ footer {
 //   }
 // }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   footer {
     padding: 50px;
   }
@@ -41,15 +41,15 @@ footer {
 
 @media (min-width: 1112px) {
   .coordinate p {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 1245px) {
-  .coordinate p {
     font-size: 17px;
   }
 }
+
+// @media (min-width: 1245px) {
+//   .coordinate p {
+//     font-size: 17px;
+//   }
+// }
 
 .coordinate a:hover {
   color: #720004;
@@ -60,7 +60,7 @@ footer {
   margin-top: 70px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .copyright p {
     // font-size: 10px;
     margin-top: 130px;
@@ -98,7 +98,7 @@ footer .icon {
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   // .logofooter {
   //   width: 25vh;
   // }
