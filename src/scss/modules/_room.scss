@@ -20,3 +20,42 @@
 .room img {
   padding-top: 50px;
 }
+
+.title-with-lines {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+
+.title-with-lines::before,
+.title-with-lines::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 60px; /* Adjust the length of the lines as needed */
+  height: 1px;
+  background-color: #2c1315;
+}
+
+.title-with-lines::before {
+  left: -80px; /* Adjust this value to control the distance from the title */
+}
+
+.title-with-lines::after {
+  right: -80px; /* Adjust this value to control the distance from the title */
+}
+
+@media (max-width: 768px) {
+  .title-with-lines::before,
+  .title-with-lines::after {
+    content: "";
+    width: 50px; /* Adjust the length of the lines as needed */
+  }
+  .title-with-lines::before {
+    left: -60px; /* Adjust this value to control the distance from the title */
+  }
+
+  .title-with-lines::after {
+    right: -60px; /* Adjust this value to control the distance from the title */
+  }
+}
