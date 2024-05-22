@@ -7,17 +7,17 @@
 
 @media (min-width: 768px) {
   .cooking {
-    padding: 75px;
+    padding: 70px;
   }
 }
 
 .cooking h3 {
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 @media (min-width: 768px) {
   .cooking h3 {
-    margin-top: 175px;
+    margin-top: 15%;
   }
 }
 
@@ -31,4 +31,18 @@
 
 .cooking .button:hover {
   background-color: #720004;
+}
+
+.cookingline {
+  width: 100%; /* Largeur de la ligne */
+  height: 1px; /* Hauteur de la ligne */
+  background-color: #eae0ce; /* Couleur de la ligne */
+  margin-top: 30%;
+  align-items: center;
+}
+
+@media (min-width: 1400px) {
+  .cookingline {
+    margin-top: 45%;
+  }
 }
