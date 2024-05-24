@@ -49,13 +49,13 @@
   .title-with-lines::before,
   .title-with-lines::after {
     content: "";
-    width: 50px; /* Adjust the length of the lines as needed */
+    width: 20px; /* Adjust the length of the lines as needed */
   }
   .title-with-lines::before {
-    left: -60px; /* Adjust this value to control the distance from the title */
+    left: -25px; /* Adjust this value to control the distance from the title */
   }
 
   .title-with-lines::after {
-    right: -60px; /* Adjust this value to control the distance from the title */
+    right: -25px; /* Adjust this value to control the distance from the title */
   }
 }
