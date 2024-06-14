@@ -27,35 +27,74 @@
   display: inline-block;
 }
 
+// .title-with-lines::before,
+// .title-with-lines::after {
+//   content: "";
+//   position: absolute;
+//   top: 50%;
+//   width: 60px; /* Adjust the length of the lines as needed */
+//   height: 1px;
+//   background-color: #2c1315;
+// }
+
+// .title-with-lines::before {
+//   left: -80px; /* Adjust this value to control the distance from the title */
+// }
+
+// .title-with-lines::after {
+//   right: -80px; /* Adjust this value to control the distance from the title */
+// }
+
+// @media (max-width: 768px) {
+//   .title-with-lines::before,
+//   .title-with-lines::after {
+//     content: "";
+//     width: 20px; /* Adjust the length of the lines as needed */
+//   }
+//   .title-with-lines::before {
+//     left: -25px; /* Adjust this value to control the distance from the title */
+//   }
+
+//   .title-with-lines::after {
+//     right: -25px; /* Adjust this value to control the distance from the title */
+//   }
+// }
+
+/* Styles par défaut pour les petits écrans */
+.title-with-lines {
+  position: relative;
+}
+
 .title-with-lines::before,
 .title-with-lines::after {
   content: "";
   position: absolute;
   top: 50%;
-  width: 60px; /* Adjust the length of the lines as needed */
+  width: 20px; /* Longueur des lignes pour les petits écrans */
   height: 1px;
   background-color: #2c1315;
 }
 
 .title-with-lines::before {
-  left: -80px; /* Adjust this value to control the distance from the title */
+  left: -25px; /* Distance des lignes par rapport au titre pour les petits écrans */
 }
 
 .title-with-lines::after {
-  right: -80px; /* Adjust this value to control the distance from the title */
+  right: -25px; /* Distance des lignes par rapport au titre pour les petits écrans */
 }
 
-@media (max-width: 768px) {
+/* Media query pour les écrans de 768px et plus */
+@media (min-width: 768px) {
   .title-with-lines::before,
   .title-with-lines::after {
-    content: "";
-    width: 20px; /* Adjust the length of the lines as needed */
+    width: 60px; /* Longueur des lignes pour les grands écrans */
   }
+
   .title-with-lines::before {
-    left: -25px; /* Adjust this value to control the distance from the title */
+    left: -80px; /* Distance des lignes par rapport au titre pour les grands écrans */
   }
 
   .title-with-lines::after {
-    right: -25px; /* Adjust this value to control the distance from the title */
+    right: -80px; /* Distance des lignes par rapport au titre pour les grands écrans */
   }
 }
