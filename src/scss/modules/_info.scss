@@ -38,9 +38,13 @@
   text-align: left;
 }
 
-@media (max-width: 767px) {
+#infocard2 {
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
   #infocard2 {
-    margin-top: 20px;
+    margin-top: 0px;
   }
 }
 
