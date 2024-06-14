@@ -2,38 +2,88 @@
 /* burger menu */
 /* burger menu */
 
+// .menu-toggle {
+//   background-color: transparent; /* Rendre le fond de couleur transparent */
+//   border: none; /* Supprimer les bordures */
+//   cursor: pointer;
+// }
+
+// /* Media query pour rendre le menu réactif */
+// @media screen and (max-width: 767px) {
+//   header {
+//     background-color: transparent; /* Rendre le fond de couleur transparent */
+//   }
+
+//   header a {
+//     display: none; /* Cacher les liens du menu */
+//   }
+
+//   .menu-toggle {
+//     display: block; /* Afficher le bouton du menu burger */
+//   }
+
+//   /* Cacher l'image du logo pour les écrans de 768px ou moins */
+//   .logo {
+//     display: none;
+//   }
+// }
+
+/* Styles par défaut pour les petits écrans */
+/* burger menu */
 .menu-toggle {
   background-color: transparent; /* Rendre le fond de couleur transparent */
   border: none; /* Supprimer les bordures */
   cursor: pointer;
+  display: block; /* Afficher le bouton du menu burger par défaut */
 }
 
-/* Media query pour rendre le menu réactif */
-@media screen and (max-width: 767px) {
+header {
+  background-color: transparent; /* Par défaut, le fond est transparent pour les petits écrans */
+}
+
+header a {
+  display: none; /* Cacher les liens du menu par défaut */
+}
+
+.logo {
+  display: none; /* Cacher l'image du logo par défaut */
+}
+
+/* Media query pour les écrans de 768px et plus */
+@media screen and (min-width: 768px) {
   header {
-    background-color: transparent; /* Rendre le fond de couleur transparent */
+    background-color: #2c1315; /* Ajouter le fond pour les grands écrans */
   }
 
   header a {
-    display: none; /* Cacher les liens du menu */
+    display: inline-block; /* Afficher les liens du menu pour les grands écrans */
+    margin-left: 65px; /* Ajouter la marge gauche pour espacer les liens */
   }
 
   .menu-toggle {
-    display: block; /* Afficher le bouton du menu burger */
+    display: none; /* Cacher le bouton du menu burger pour les grands écrans */
   }
 
-  /* Cacher l'image du logo pour les écrans de 768px ou moins */
   .logo {
-    display: none;
+    display: block; /* Afficher le logo pour les grands écrans */
+  }
+
+  .link {
+    display: flex; /* Afficher les liens pour les grands écrans */
+    margin-left: auto; /* Pousser les liens vers la droite */
+  }
+
+  .header-content {
+    justify-content: flex-start; /* Aligner les éléments au début pour les grands écrans */
   }
 }
 
-/* Cacher le bouton du menu burger pour les écrans supérieurs à 768px */
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none; /* Cacher le bouton du menu burger */
-  }
-}
+// /* Cacher le bouton du menu burger pour les écrans supérieurs à 768px */
+// @media screen and (min-width: 768px) {
+//   .menu-toggle {
+//     display: none; /* Cacher le bouton du menu burger */
+//   }
+// }
 
 /* fonction clic */
 /* fonction clic */
@@ -80,10 +130,10 @@
 
 /* CSS existant */
 
-/* Media query pour rendre le menu réactif */
-@media screen and (max-width: 768px) {
-  /* Autres règles CSS pour le menu réactif */
-}
+// /* Media query pour rendre le menu réactif */
+// @media screen and (max-width: 768px) {
+//   /* Autres règles CSS pour le menu réactif */
+// }
 
 /* Style pour le défilement désactivé */
 .disable-scroll {
