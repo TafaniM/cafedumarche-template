@@ -1,18 +1,87 @@
+// .home {
+//   width: 100%; /* Pour que le conteneur prenne 100% de la largeur de l'écran */
+//   position: relative;
+// }
+
+// @media (min-width: 768px) {
+//   .home {
+//     margin-top: 90px;
+//   }
+// }
+
+// @media (min-width: 1200px) {
+//   .home {
+//     margin-top: 65px;
+//   }
+// }
+
+// .home img {
+//   width: 100%;
+// }
+
+// .title-container {
+//   background-color: #eae0ce;
+//   position: absolute;
+//   top: 25%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   padding: 60px;
+//   outline: 1px solid #2c1315;
+//   outline-offset: -16px;
+//   width: 30%;
+// }
+
+// @media (max-width: 1200px) {
+//   .title-container {
+//     padding: 40px;
+//     outline-offset: -12px;
+//     width: 40%; /* Largeur de 80% de la largeur de l'écran */
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .title-container {
+//     padding: 18px;
+//     outline-offset: -7px;
+//     width: 50%; /* Largeur de 80% de la largeur de l'écran */
+//   }
+// }
+
+// @media (max-width: 576px) {
+//   .title-container {
+//     padding: 18px;
+//     outline-offset: -7px;
+//     width: 65%; /* Largeur de 80% de la largeur de l'écran */
+//   }
+// }
+
+// /* image de fond */
+
+// @media (max-width: 768px) {
+//   .home {
+//     position: relative; /* Assurez-vous que la position est relative */
+//     height: 100vh; /* Définit la hauteur de l'élément sur 100% de la hauteur de la fenêtre */
+//     overflow: hidden; /* Empêche tout contenu supplémentaire de déborder de l'élément */
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .home > img.background-image {
+//     position: absolute; /* Position absolue pour que l'image couvre toute la hauteur de l'élément parent */
+//     width: auto; /* La largeur de l'image s'ajustera automatiquement pour conserver ses proportions */
+//     height: 100%; /* La hauteur de l'image sera de 100% de la hauteur de l'élément parent */
+//     top: 0; /* Positionnez l'image en haut de l'élément parent */
+//     left: 0; /* Positionnez l'image à gauche de l'élément parent */
+//     object-fit: cover; /* Ajuste la taille de l'image pour qu'elle couvre toute la zone disponible sans déformation */
+//   }
+// }
+
+/* Styles par défaut pour la version mobile */
 .home {
   width: 100%; /* Pour que le conteneur prenne 100% de la largeur de l'écran */
   position: relative;
-}
-
-@media (min-width: 768px) {
-  .home {
-    margin-top: 90px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .home {
-    margin-top: 65px;
-  }
+  height: 100vh; /* Définit la hauteur de l'élément sur 100% de la hauteur de la fenêtre */
+  overflow: hidden; /* Empêche tout contenu supplémentaire de déborder de l'élément */
 }
 
 .home img {
@@ -25,53 +94,60 @@
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 60px;
+  padding: 18px;
   outline: 1px solid #2c1315;
-  outline-offset: -16px;
-  width: 30%;
+  outline-offset: -7px;
+  width: 65%; /* Largeur de 65% de la largeur de l'écran */
 }
 
-@media (max-width: 1200px) {
+.home > img.background-image {
+  position: absolute; /* Position absolue pour que l'image couvre toute la hauteur de l'élément parent */
+  width: auto; /* La largeur de l'image s'ajustera automatiquement pour conserver ses proportions */
+  height: 100%; /* La hauteur de l'image sera de 100% de la hauteur de l'élément parent */
+  top: 0; /* Positionnez l'image en haut de l'élément parent */
+  left: 0; /* Positionnez l'image à gauche de l'élément parent */
+  object-fit: cover; /* Ajuste la taille de l'image pour qu'elle couvre toute la zone disponible sans déformation */
+}
+
+/* Media query pour les écrans à partir de 576px */
+@media (min-width: 576px) {
+  .title-container {
+    padding: 18px;
+    outline-offset: -7px;
+    width: 50%; /* Largeur de 50% de la largeur de l'écran */
+  }
+}
+
+/* Media query pour les écrans à partir de 768px */
+@media (min-width: 768px) {
   .title-container {
     padding: 40px;
     outline-offset: -12px;
-    width: 40%; /* Largeur de 80% de la largeur de l'écran */
+    width: 40%; /* Largeur de 50% de la largeur de l'écran */
   }
-}
 
-@media (max-width: 768px) {
-  .title-container {
-    padding: 18px;
-    outline-offset: -7px;
-    width: 50%; /* Largeur de 80% de la largeur de l'écran */
-  }
-}
-
-@media (max-width: 576px) {
-  .title-container {
-    padding: 18px;
-    outline-offset: -7px;
-    width: 65%; /* Largeur de 80% de la largeur de l'écran */
-  }
-}
-
-/* image de fond */
-
-@media (max-width: 768px) {
   .home {
-    position: relative; /* Assurez-vous que la position est relative */
-    height: 100vh; /* Définit la hauteur de l'élément sur 100% de la hauteur de la fenêtre */
-    overflow: hidden; /* Empêche tout contenu supplémentaire de déborder de l'élément */
+    height: auto; /* Ajustez la hauteur en fonction des besoins des grands écrans */
+    margin-top: 90px; /* Ajoute de l'espace en haut pour les grands écrans */
+  }
+
+  .home > img.background-image {
+    width: 100%; /* Ajustez en fonction de vos besoins pour les grands écrans */
+    height: auto; /* Ajustez en fonction de vos besoins pour les grands écrans */
+    position: relative; /* Change la position de l'image pour qu'elle s'adapte au contenu */
+    object-fit: cover; /* Assurez-vous que l'image couvre bien la zone */
   }
 }
 
-@media (max-width: 768px) {
-  .home > img.background-image {
-    position: absolute; /* Position absolue pour que l'image couvre toute la hauteur de l'élément parent */
-    width: auto; /* La largeur de l'image s'ajustera automatiquement pour conserver ses proportions */
-    height: 100%; /* La hauteur de l'image sera de 100% de la hauteur de l'élément parent */
-    top: 0; /* Positionnez l'image en haut de l'élément parent */
-    left: 0; /* Positionnez l'image à gauche de l'élément parent */
-    object-fit: cover; /* Ajuste la taille de l'image pour qu'elle couvre toute la zone disponible sans déformation */
+/* Media query pour les écrans à partir de 1200px */
+@media (min-width: 1200px) {
+  .title-container {
+    padding: 40px;
+    outline-offset: -16px;
+    width: 30%; /* Largeur de 40% de la largeur de l'écran */
+  }
+
+  .home {
+    margin-top: 65px; /* Réduit la marge supérieure pour les très grands écrans */
   }
 }
