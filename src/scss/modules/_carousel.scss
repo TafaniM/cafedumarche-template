@@ -1,11 +1,57 @@
+// .carousel {
+//   position: relative;
+//   text-align: center;
+// }
+
+// .carousel img {
+//   display: none;
+//   width: 100%; /* Ajustez la largeur selon vos besoins */
+// }
+
+// .carousel img:first-child {
+//   display: inline;
+// }
+
+// .carousel-button {
+//   position: absolute;
+//   top: 60%;
+//   // transform: translateY(-50%);
+//   background: none;
+//   border: none;
+//   color: #eae0ce;
+//   font-size: 40px;
+//   cursor: pointer;
+//   z-index: 1000;
+//   border-radius: 100%;
+// }
+
+// #prevButton {
+//   left: 10px;
+// }
+
+// #nextButton {
+//   right: 10px;
+// }
+
+// /* Media query for screens smaller than 768px */
+// @media (max-width: 768px) {
+//   .carousel img {
+//     width: 100%;
+//     height: 40vh; /* Adjust the height as needed */
+//     object-fit: cover;
+//   }
+// }
+
 .carousel {
   position: relative;
   text-align: center;
 }
 
 .carousel img {
+  width: 100%;
+  height: 40vh; /* Ajustez la hauteur pour les petits écrans */
+  object-fit: cover; /* Pour s'assurer que l'image remplit bien l'espace */
   display: none;
-  width: 100%; /* Ajustez la largeur selon vos besoins */
 }
 
 .carousel img:first-child {
@@ -15,7 +61,6 @@
 .carousel-button {
   position: absolute;
   top: 60%;
-  // transform: translateY(-50%);
   background: none;
   border: none;
   color: #eae0ce;
@@ -33,11 +78,11 @@
   right: 10px;
 }
 
-/* Media query for screens smaller than 768px */
-@media (max-width: 768px) {
+/* Media query for screens 768px and larger */
+@media (min-width: 768px) {
   .carousel img {
-    width: 100%;
-    height: 40vh; /* Adjust the height as needed */
-    object-fit: cover;
+    width: 100%; /* Ajustez la largeur pour les grands écrans */
+    height: auto; /* Supprimez la restriction de hauteur */
+    object-fit: none; /* Ajustez en fonction de vos besoins pour les grands écrans */
   }
 }
