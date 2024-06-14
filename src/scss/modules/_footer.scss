@@ -81,7 +81,7 @@ footer {
   width: 100%; /* Largeur de la ligne */
   height: 1px; /* Hauteur de la ligne */
   background-color: #eae0ce; /* Couleur de la ligne */
-  margin: 50px 0px 50px;
+  margin: 50px 0px 30px;
   align-items: center;
 }
 
@@ -98,12 +98,12 @@ footer .icon {
   margin-bottom: 10px;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   // .logofooter {
   //   width: 25vh;
   // }
   .line {
-    margin: 50px 0px 30px;
+    margin: 50px 0px 50px;
   }
   footer p {
     margin-top: 18px;
